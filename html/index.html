@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Management</title>
     <link href="../packages/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../js/addStudent.js"></script>
   </head>
   <body>
+    <div class="alert-class" style="display: none">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Alert!</strong> All the fields are requied. Please fill all the
+        fields.
+      </div>
+    </div>
+
     <section class="add-std-form">
       <div class="container">
         <h4 class="bg-info text-white text-center p-2">Add Student Form</h4>
@@ -65,7 +73,11 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <button type="button" class="btn btn-outline-success float-end">
+            <button
+              id="save-btn"
+              type="button"
+              class="btn btn-outline-success float-end"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
