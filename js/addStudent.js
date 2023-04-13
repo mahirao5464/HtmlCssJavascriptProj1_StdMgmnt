@@ -15,7 +15,23 @@ const addStudent = function () {
       alertElmRef.style.display = "block";
       return;
     }
-    console.log("Registering student please wait......");
+    const fullName = document.getElementById("fullName").value;
+    const fatherName = document.getElementById("fatherName").value;
+    const motherName = document.getElementById("motherName").value;
+    const dob = document.getElementById("dob").value;
+
+    let rowTemplate = `<tr>
+              <th scope="row">1</th>
+              <td>${fullName}</td>
+              <td>${fatherName}</td>
+              <td>${motherName}</td>
+              <td>${dob}</td>
+            </tr>`;
+
+    const tableBodyElmRef = document.getElementById("studentTableBody");
+
+    tableBodyElmRef.innerHTML += rowTemplate;
+    document.querySelector("form").reset();
   }
 
   function isStudentFormValid() {
