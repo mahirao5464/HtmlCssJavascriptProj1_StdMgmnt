@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Management</title>
     <link href="../packages/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../js/addStudent.js"></script>
   </head>
   <body>
+    <div class="alert-class" style="display: none">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Alert!</strong> All the fields are requied. Please fill all the
+        fields.
+      </div>
+    </div>
+
     <section class="add-std-form">
       <div class="container">
         <h4 class="bg-info text-white text-center p-2">Add Student Form</h4>
@@ -18,7 +26,9 @@
       <div class="container">
         <div class="row p-4">
           <div class="col-sm-12 col-md-6 col-xl-4">
-            <label for="fullName" class="form-label">Full Name:</label>
+            <label for="fullName" class="form-label"
+              >Full Name<span class="text-danger">*</span>:</label
+            >
             <input
               type="text"
               id="fullName"
@@ -27,7 +37,9 @@
             />
           </div>
           <div class="col-sm-12 col-md-6 col-xl-4">
-            <label for="fatherName" class="form-label">Father Name:</label>
+            <label for="fatherName" class="form-label"
+              >Father Name<span class="text-danger">*</span>:</label
+            >
             <input
               type="text"
               id="fatherName"
@@ -36,7 +48,9 @@
             />
           </div>
           <div class="col-sm-12 col-md-6 col-xl-4">
-            <label for="motherName" class="form-label">Mother Name:</label>
+            <label for="motherName" class="form-label"
+              >Mother Name<span class="text-danger">*</span>:</label
+            >
             <input
               type="text"
               id="motherName"
@@ -45,7 +59,9 @@
             />
           </div>
           <div class="col-sm-12 col-md-6 col-xl-4">
-            <label for="dob" class="form-label">Date of Birth:</label>
+            <label for="dob" class="form-label"
+              >Date of Birth<span class="text-danger">*</span>:</label
+            >
             <input
               type="date"
               id="dob"
@@ -57,7 +73,11 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <button type="button" class="btn btn-outline-success float-end">
+            <button
+              id="save-btn"
+              type="button"
+              class="btn btn-outline-success float-end"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
