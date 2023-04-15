@@ -15,7 +15,43 @@
         fields.
       </div>
     </div>
-
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="editModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="editModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editModalLabel">Edit Student</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input type="number" id="studentIndex" />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="add-std-form">
       <div class="container">
         <h4 class="bg-info text-white text-center p-2">Add Student Form</h4>
@@ -113,6 +149,7 @@
               <th scope="col">Father Name</th>
               <th scope="col">Mother Name</th>
               <th scope="col">DOB</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody id="studentTableBody"></tbody>
