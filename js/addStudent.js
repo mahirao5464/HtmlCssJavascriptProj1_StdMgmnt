@@ -45,7 +45,7 @@ function renderTable(el) {
             </tr>`;
 
   tableBodyElmRef.innerHTML += rowTemplate;
-  document.querySelector("form").reset();
+  document.querySelector("form#saveStdForm").reset();
 }
 
 function isStudentFormValid() {
@@ -63,5 +63,10 @@ function isStudentFormValid() {
 function showEditModal(elm) {
   let stdIndex = +elm.getAttribute("student-index");
   document.getElementById("studentIndex").value = stdIndex;
+  let selectedStudent = students.find(el=>el.rollNumber==stdIndex);
+  document.getElementById("editFullName").value = selectedStudent.fullName;
+  document.getElementById("editFatherName").value = selectedStudent.fatherName;
+  document.getElementById("editMotherName").value = selectedStudent.motherName;
+  document.getElementById("editDob").value = selectedStudent.dob;
 }
 window.addEventListener("load", addStudent);

@@ -17,7 +17,7 @@
     </div>
     <!-- Modal -->
     <div
-      class="modal fade"
+      class="modal fade modal-lg"
       id="editModal"
       data-bs-backdrop="static"
       data-bs-keyboard="false"
@@ -37,7 +37,31 @@
             ></button>
           </div>
           <div class="modal-body">
-            <input type="number" id="studentIndex" />
+            <div class="container">
+              <form action="">
+                <div class="row p-4">
+                  <div class="col-sm-12 col-md-6 col-xl-4">
+                    <label for="editFullName" class="form-label">Full Name<span class="text-danger">*</span>:</label>
+                    <input type="text" id="editFullName" placeholder="please enter your full name" class="form-control" />
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-xl-4">
+                    <label for="editFatherName" class="form-label">Father Name<span class="text-danger">*</span>:</label>
+                    <input type="text" id="editFatherName" placeholder="please enter your father name" class="form-control" />
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-xl-4">
+                    <label for="editMotherName" class="form-label">Mother Name<span class="text-danger">*</span>:</label>
+                    <input type="text" id="editMotherName" placeholder="please enter your mother name" class="form-control" />
+                  </div>
+                  <div class="col-sm-12 col-md-6 col-xl-4">
+                    <label for="editDob" class="form-label">Date of Birth<span class="text-danger">*</span>:</label>
+                    <input type="date" id="editDob" placeholder="Select you DOB" class="form-control" />
+                  </div>
+                </div>
+            
+                
+              </form>
+            </div>
+            <input type="hidden" id="studentIndex" />
           </div>
           <div class="modal-footer">
             <button
@@ -47,7 +71,15 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <button id="update-btn" type="button" class="btn btn-outline-success float-end">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill"
+                viewBox="0 0 16 16">
+                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                <path fill-rule="evenodd"
+                  d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+              </svg>
+              Update Student
+            </button>
           </div>
         </div>
       </div>
@@ -61,7 +93,7 @@
 
     <section class="form-grid">
       <div class="container">
-        <form action="">
+        <form action="" id="saveStdForm">
           <div class="row p-4">
             <div class="col-sm-12 col-md-6 col-xl-4">
               <label for="fullName" class="form-label"
