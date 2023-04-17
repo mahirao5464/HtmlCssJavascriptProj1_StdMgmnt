@@ -1,5 +1,6 @@
 var srNo = 0;
 var students = [];
+
 function addStudent() {
   // Getting save btn ref in js
   const saveButtonRef = document.getElementById("save-btn");
