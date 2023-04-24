@@ -1,7 +1,7 @@
 var students = [];
 var editModal;
 
-function addStudent() {
+function loadStudents() {
   editModal = new bootstrap.Modal(document.getElementById("editModal"), {
     backdrop: "static",
   });
@@ -15,7 +15,7 @@ function addStudent() {
   // fetching data from endpoint
   fetch("https://crudcrud.com/api/e4e4cfae69e7472d9b86823b26555c6d/Students")
     .then((el) => el.json()) // converting result to json
-    .then(apiResult); // calling apiresult function once response converted to json
+    .then(apiResult); // calling apiResult function once response converted to json
 
   // adds data to table
   function apiResult(result) {
@@ -207,4 +207,4 @@ async function updateStudentData(studentId, student) {
     return false;
   }
 }
-window.addEventListener("load", addStudent);
+window.addEventListener("load", loadStudents);
